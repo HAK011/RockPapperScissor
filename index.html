@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="./index.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+  <div class="body-container">
+    <header class="container">
+      <div class="header-con">
+        <h1 class="logo">rock <br> paper <br> scissors</h1>
+        <div class="score">
+          <span>score</span>
+          <h2 id="playerScore">0</h2>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="play" id="handSelection">
+        <div class="container">
+          <button type="button" value="paper"
+            class="hand paper isClick"></button>
+          <button type="button" value="scissors"
+            class="hand scissors isClick"></button>
+          <button type="button" value="rock" class="hand rock isClick"></button>
+        </div>
+      </section>
+      <section class="compare container" id="compare">
+        <div class="player">
+          <div class="place-holder" disabled="true" id="player"></div>
+          <p id="pick">you picked</p>
+        </div>
+        <div class="result" id="result">
+          <h1>you win</h1>
+          <button id="replay">play again</button>
+        </div>
+        <div class="computer">
+          <div class="place-holder" disabled="true" id="computer"></div>
+          <p>the house picked</p>
+        </div>
+      </section>
+    </main>
+    <footer class="rules">
+      <button id="rulesBtn">rules</button>
+    </footer>
+  </div>
+  <dialog id="rules">
+    <div>
+      <h3>rules</h3>
+      <button id="close">
+        <img src="./images/icon-close.svg" alt="close">
+      </button>
+      <img src="./images/image-rules.svg" alt="rules">
+    </div>
+  </dialog>
+  <dialog id="endResult">
+    <div>
+      <button id="endClose">
+        <img src="./images/icon-close.svg" alt="close">
+      </button>
+      <h1 id="endText">you won</h1>
+    </div>
+  </dialog>
+  <script src="./index.js"></script>
+</body>
+</html>
